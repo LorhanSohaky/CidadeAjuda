@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+#user{
+    display: inline-block;
+    margin-top: -12px;
+    font-size: 20px;
+    margin-left: 230px;
+}
+
+/* CONTEUDO */
+
+article{
+    height: 500px;
+    width: 100%;
+}
+
+/* MAPA */
+
+#googleMap{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 450px;
+}
+
+.controls {
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 300px;
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+}
+
+/* POPUP */
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: #999;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 100;
+}
+
+#popup {
+    -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.75);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    color: #000;
+    display: none;
+    position: fixed;
+    background: #fff;
+    min-height: 550px;
+    width: 570px;
+    top: 50%;
+    left: 50%;
+    margin-left: -285px;
+    margin-top: -275px;
+    z-index: 200;
+}
+
+#popup *{
+    text-align:center;
+}
+
+#popupclose {
+    float: right;
+    font-size: 10px;
+    padding: 10px;
+    cursor: pointer;
+    color: #000;
+}
+
+.popupcontent {
+    padding: 10px;
+}
+
+#caso{
+    background-image:url("../img/martelo.svg");
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+}
+
+#existente{
+    background-image:url("../img/positivo.svg");
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+}
+
+#inexistente{
+    background-image:url("../img/negativo.svg");
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+}
+
+#interacao *{
+    margin-left: 40px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#button {
+    cursor: pointer;
+}
+
+#coment{
+    -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.75);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    color: #000;
+    display: none;
+    position: fixed;
+    background: #fff;
+    min-height: 100px;
+    width: 300px;
+    height:300px;
+    top: 50%;
+    left: 60%;
+    margin-left: -285px;
+    margin-top: -275px;
+    z-index: 999;
+}
+
+#coment *{
+    text-align:center;
+}

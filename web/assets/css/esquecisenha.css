@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+section{
+    margin: 0 auto;
+    width: 70%;
+}
+
+#conteudo{
+    padding-top: 20px;
+}
+
+#conteudo *{
+    margin-left: 20px;
+    
+}

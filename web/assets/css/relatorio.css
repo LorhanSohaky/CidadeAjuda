@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+section{
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+#Sconteudo{
+    color: #000;
+    padding-top: 20px;
+}
+#pesq{
+    margin-left: 10px;
+}
+
+#result{
+    margin-left: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.item{
+    display: block;
+    border-top:dotted #000 4px;
+}
+
+.item *{
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 20px;
+    margin-left: 40px;
+    display: inline-block;
+}
+
+#conteudo{
+    margin-left: 20px;
+}

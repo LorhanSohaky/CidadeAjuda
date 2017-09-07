@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="assets/img/icon.png">
+        <title>Cidade Ajuda: Esqueci senha</title>
+        <link rel="stylesheet" href="assets/css/base.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/esquecisenha.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <img src="assets/img/logo.png" alt="Cidade Ajuda" width="200">
+            </div>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#" onclick="javascript:history.back();">Voltar</a></li>
+                    <li><a href="cadusuario.html">Cadastrar-se</a></li>
+                    <li><a href="relatorio.jsp">Relatório</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <header id="titulo"><h1>Mudar senha</h1>
+            </header>
+            <article id="conteudo">
+                <p>Preencha os dados abaixo para que possamos enviar uma mensagem para o seu endereço de e-mail para que seja possível alterar a senha.</p>
+                <form action="ChamadasUsuario" method="POST">
+                    <input type="hidden" name="acao" value="EsqueciSenha">
+                    <input type="text" name="data" placeholder="Data de nascimento"><br>
+                    <input type="text" name="email" placeholder="E-mail">
+                    <input type="submit" value="Enviar">
+                </form>
+            </article>
+        </section>
+        <footer>
+            <p>Desenvolvido pela equipe GLYBIF</p>
+        </footer>
+    </body>
+</html>

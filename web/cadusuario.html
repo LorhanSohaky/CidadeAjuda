@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="assets/img/icon.png">
+        <title>Cidade Ajuda: Cadastro do usuário</title>
+        <link rel="stylesheet" href="assets/css/base.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/cadusuario.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var mouse_inside = false;
+            var validacaoEmail = false;
+            var validacaoSenha = false;
+
+            function mascara(o, f) {
+                v_obj = o;
+                v_fun = f;
+                setTimeout("execMascara()", 1);
+            }
+
+            function execMascara() {
+                v_obj.value = v_fun(v_obj.value);
+            }
+
+            function data(v) {
+                v = v.replace(/\D/g, "");
+                v = v.replace(/(\d{2})(\d)/, "$1/$2");
+                v = v.replace(/(\d{2})(\d)/, "$1/$2");
+                return v;
+            }
+
+            $(document).ready(function () {
+                $('.email').keyup(function () {
+
+                    var email = $('#input_email').val();
+                    var confirmacaoEmail = $('#input_email_confirma').val();
+
+                    if (!(email === confirmacaoEmail)) {
+                        $('.email').addClass('error-input');
+                    } else {
+                        $('.email').removeClass('error-input');
+                    }
+                });
+
+                $('.senhaInput').keyup(function () {
+                    var senha = $('#input_senha').val();
+                    var confirmacaoSenha = $('#input_senha_confirma').val();
+
+                    if (!(senha === confirmacaoSenha)) {
+                        $('.senhaInput').addClass('error-input');
+                    } else {
+                        $('.senhaInput').removeClass('error-input');
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <img src="assets/img/logo.png" alt="Cidade Ajuda" width="200">
+            </div>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#" onclick="javascript:history.back();">Voltar</a></li>
+                    <li><a href="relatorio.jsp">Relatório</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <header id="titulo"><h1>CADASTRO DO USUÁRIO</h1>
+            </header>
+            <div id="conteudo">
+                <form name="Formulario" id="form_cadastro" method="POST" action="ChamadasUsuario">
+                    <input style="display: none;" type="text" name="acao" value="CadastrarUsuario">
+                    <div class="input-field left">
+                        <input id="input_nome" placeholder="Nome" type="text" name="nome" required>
+                    </div>
+                    <div class="input-field left">
+                        <input type="text" placeholder="Apelido" name="apelido" required>
+                    </div>
+                    <div class="input-field left">
+                        <input class="email" id="input_email" type="email" placeholder="Email" name="email" required>
+                    </div>
+                    <div class="input-field left">
+                        <input class="email" id="input_email_confirma" type="email" placeholder="Confirmar email" name="confirmeemail" required>
+                    </div>
+                    <div class="input-field left">
+                        <input class="senhaInput" id="input_senha" type="password" placeholder="Senha" name="senha" required>
+                    </div>
+                    <div class="input-field left">
+                        <input class="senhaInput" id="input_senha_confirma" type="password" placeholder="Confirmar senha" name="confirmesenha" required>
+                    </div>
+                    <div class="input-field left">
+                        <input id="input_data" type="text" placeholder="Data de nascimento" onkeyup="mascara(this, data);" maxlength="10" name="dataNascimento" required>
+                    </div>
+                    <div class="clear">&nbsp;</div>
+                    <div class="row-termos-de-uso-submit">
+                        <div class="termos-de-uso">
+                            Ao clicar em Cadastrar, você concorda com os <a href="#">termos de uso.</a>
+                        </div>
+                        <div class="row-button-submit">
+                            <button class="header-content-button sign-up" type="submit">Cadastrar</button> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <p>Desenvolvido pela equipe GLYBIF</p>
+        </footer>
+    </body>
+</html>
